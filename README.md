@@ -7,9 +7,11 @@
 - Learn ways to [generate the access token](https://github.com/mianwu515/rust-world-spr23/tree/main/music-recommendation-service-with-spotify-api#steps) with the client_id and client_secret
 
 ### 2. Run the CLI tool with your ready client_id and client_secret
-`cargo run -- music --genre [NAME of the GENRE] --id [YOUR ACCOUNT ID] --secret [YOUR ACCOUNT SECRET]`
+`cargo run --bin spotify -- music --genre [NAME of the GENRE] --id [YOUR ACCOUNT ID] --secret [YOUR ACCOUNT SECRET]`
 
-For example, `cargo run -- music --genre acoustic --id 123456xxx --secret abcdefxxx`
+Notice `cargo run --bin [package name]` runs at the top level of the repo.
+
+For example, `cargo run --bin spotify -- music --genre acoustic --id 123456xxx --secret abcdefxxx`
 
 Possible genres can be found below.
 
