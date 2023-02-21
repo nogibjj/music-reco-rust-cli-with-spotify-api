@@ -2,18 +2,18 @@
 
 ## Usage
 
-### 1. [Obtain a "client id" and a "client secret" from Spotify developer api](https://github.com/mianwu515/rust-world-spr23/tree/main/music-recommendation-service-with-spotify-api#obtain-a-client-id-and-a-client-secret)
+### 1. Obtain a "client id" and a "client secret" from [Spotify developer website](https://developer.spotify.com/dashboard/applications)
 
-### 2. Replace them in the main.rs
+- Learn ways to [generate the access token](https://github.com/mianwu515/rust-world-spr23/tree/main/music-recommendation-service-with-spotify-api#steps) with the client_id and client_secret
 
-### 3. Run the program
-`cargo run -- music --genre [name of the genre]`
+### 2. Run the CLI tool with your ready client_id and client_secret
+`cargo run -- music --genre [NAME of the GENRE] --id [YOUR ACCOUNT ID] --secret [YOUR ACCOUNT SECRET]`
 
-For example, `cargo run -- music --genre acoustic`
+For example, `cargo run -- music --genre acoustic --id 123456xxx --secret abcdefxxx`
 
 Possible genres can be found below.
 
-### 4. Example output
+### 3. Example output
 ```text
 Rock House Boogie by John Lee Hooker
 Nobody Knows You When You're Down and Out - 78rpm Version by Bessie Smith

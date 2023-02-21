@@ -24,6 +24,10 @@ enum Commands {
     Music {
         #[clap(short, long)]
         genre: String,
+        #[clap(short, long)]
+        id: String,
+        #[clap(short, long)]
+        secret: String,
     },
 }
 
@@ -98,10 +102,8 @@ fn get_recommendations(
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Cli::parse();
     match args.command {
-        Some(Commands::Music { genre }) => {
-            let client_id = "YOUR_CLIENT_ID"; // TODO: replace here!
-            let client_secret = "YOUR_CLIENT_SECRET"; // TODO: replace here!
-            let access_token = get_access_token(client_id, client_secret)?;
+        Some(Commands::Music { genre, id, secret}) => {
+            let access_token = get_access_token(id.as_str(), secret.as_str())?;
 
             // println!("Access token: {}", access_token);
 
