@@ -11,7 +11,7 @@ use serde::{Deserialize, Serialize};
 #[clap(
     version = "1.0",
     author = "Mian Wu",
-    about = "A Rock-Paper-Scissors game."
+    about = "A Rust music recommendation service with Spotify API."
 )]
 struct Cli {
     #[clap(subcommand)]
@@ -99,8 +99,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Cli::parse();
     match args.command {
         Some(Commands::Music { genre }) => {
-            let client_id = "YOUR_CLIENT_ID"; // TODO: replace here!
-            let client_secret = "YOUR_CLIENT_SECRET"; // TODO: replace here!
+            let client_id = "369dbd7452cf4e5fac093191ef5e6538"; // TODO: replace here!
+            let client_secret = "12125765ddf14ff086d8b3252969f7a6"; // TODO: replace here!
             let access_token = get_access_token(client_id, client_secret)?;
 
             // println!("Access token: {}", access_token);
