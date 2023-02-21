@@ -1,4 +1,4 @@
-# Usage
+# A music recommendation cli tool using Rust with Spotify Developer API 
 
 ## Usage
 
