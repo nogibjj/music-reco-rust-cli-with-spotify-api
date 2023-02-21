@@ -5,13 +5,15 @@
 ### 1. [Obtain a "client id" and a "client secret" from Spotify developer api](https://github.com/mianwu515/rust-world-spr23/tree/main/music-recommendation-service-with-spotify-api#obtain-a-client-id-and-a-client-secret)
 
 ### 2. Replace them in the main.rs
+
+### 3. Run the program
 `cargo run -- music --genre [name of the genre]`
 
 For example, `cargo run -- music --genre acoustic`
 
 Possible genres can be found below.
 
-### 3. Example output
+### 4. Example output
 ```text
 Rock House Boogie by John Lee Hooker
 Nobody Knows You When You're Down and Out - 78rpm Version by Bessie Smith
