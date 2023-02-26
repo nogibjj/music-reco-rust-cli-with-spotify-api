@@ -32,4 +32,17 @@ build-release:
 	@echo "Releasing all projects with cargo"
 	./release.sh
 
+
+# Docker
+build:
+	cd spotify
+	docker build -t musicreco .
+
+runlocallybuiltdockercontainer:
+	docker run -it --rm -p 8080:8080 musicreco
+
+pullimageandruncontainer:
+	docker pull mianwu/musicreco:latest
+	docker run -it --rm -p 8080:8080 mianwu/musicreco:latest
+	
 all: format lint test
